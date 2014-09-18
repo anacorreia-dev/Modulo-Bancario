@@ -12,6 +12,5 @@ Class ContaPremium extends Conta
     {
       $this->saldo += $valor;
       $this->saldo++;
-    }
-  
+    }  
 }

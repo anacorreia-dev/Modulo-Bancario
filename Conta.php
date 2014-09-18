@@ -36,4 +36,3 @@ $conta->depositar(10000);
 $conta->sacar(1000);
 echo ('Saldo Anterior da Conta R$: '.$conta->getSaldo());
 echo '<pre>';
-?>

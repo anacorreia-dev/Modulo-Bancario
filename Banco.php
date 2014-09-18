@@ -7,26 +7,16 @@
 require_once 'Conta.php';
 require_once 'ContaPremium.php';
 
-Class Banco 
+abstract Class Banco 
 {
-	private $nome;
-	private $cnpj;
-	private $conta;
-	private $contaPremium;
-
-	public function setNome($nome)
-	{
-		$this->nome = $nome;
-	}
+	protected $nome;
+	protected $cnpj;
+	protected $conta;
+	protected $contaPremium;
 
 	public function getNome()
 	{
 		return $this->nome;
-	}
-
-	public function setCnpj($cnpj)
-	{
-		$this->cnpj = $cnpj;
 	}
 
 	public function getCnpj()
@@ -54,15 +44,3 @@ Class Banco
 		return $this->contaPremium;
 	}
 }
-
-$banco = new Banco();
-$Conta = new Conta();
-$ContaPremium = new ContaPremium();
-
-$banco->setNome('Santander');
-$banco->setCnpj(00001.123);
-$banco->setConta($conta);
-$banco->setContaPremium($ContaPremium);
-
-$banco->getConta()->depositar(500);
-echo ('Saldo Atualizado´da Conta R$: '.$banco->getConta()->getSaldo());
