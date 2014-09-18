@@ -5,8 +5,8 @@
   Date: 18/09/2014
   Mail: anacorreia.dev@gmail.com
 */
-require'Conta.php';
-Class Premium extends Conta
+require_once 'Conta.php';
+Class ContaPremium extends Conta
 {
 	public function depositar ($valor)
     {
@@ -15,9 +15,3 @@ Class Premium extends Conta
     }
   
 }
-
-$conta = new Conta();
-$conta->depositar(10000);
-$conta->sacar(1000);
-echo $conta->getSaldo();
-?>
