@@ -6,33 +6,27 @@
   Mail: anacorreia.dev@gmail.com
 */
 
-Class Conta
+Class Conta implements ContaInterface
 {
   protected $saldo;
    
-  public function depositar ($valor)
+  public function depositar($valor)
   {
-    $this->saldo += $valor;
+      $this->saldo += $valor;
   }
     
-  public function sacar ($valor)
+  public function sacar($valor)
   {
-    if ($this->saldo  >=  $valor)
-    {
-      $this->saldo -= $valor;
-      return true;
-    }
+      if ($this->saldo  >=  $valor)
+      {
+          $this->saldo -= $valor;
+          return true;
+      }
       return false;
   }
 
   public function getSaldo()
   {
-    return $this->saldo;
+      return $this->saldo;
   }
 }
-
-$conta = new Conta();
-$conta->depositar(10000);
-$conta->sacar(1000);
-echo ('Saldo Anterior da Conta R$: '.$conta->getSaldo());
-echo '<pre>';

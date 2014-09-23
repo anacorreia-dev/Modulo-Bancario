@@ -5,12 +5,11 @@
   Date: 18/09/2014
   Mail: anacorreia.dev@gmail.com
 */
-require_once 'Conta.php';
+
 Class ContaPremium extends Conta
 {
 	public function depositar ($valor)
     {
-      $this->saldo += $valor;
-      $this->saldo++;
+      $this->saldo += $valor;      
     }  
 }

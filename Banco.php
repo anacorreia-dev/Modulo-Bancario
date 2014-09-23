@@ -4,10 +4,8 @@
   Date: 18/09/2014
   Mail: anacorreia.dev@gmail.com
 */
-require_once 'Conta.php';
-require_once 'ContaPremium.php';
 
-abstract Class Banco 
+abstract Class Banco
 {
 	protected $nome;
 	protected $cnpj;
@@ -24,7 +22,7 @@ abstract Class Banco
 		return $this->cnpj;
 	}
 
-	public function setConta(Conta $conta)
+	public function setConta(ContaInterface $conta)
 	{
 		$this->conta = $conta;
 	}
@@ -34,9 +32,9 @@ abstract Class Banco
 		return $this->conta;
 	}
 
-	public function setContaPremium(ContaPremium $ContaPremium)
+	public function setContaPremium(ContaInterface $contaPremium)
 	{
-		$this->contaPremium = $ContaPremium;
+		$this->contaPremium = $contaPremium;
 	}
 
 	public function getContaPremium()
